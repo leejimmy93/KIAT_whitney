@@ -44,5 +44,6 @@ java -cp /usr/local/stow/GenomeAnalysisTK/GenomeAnalysisTK.jar org.broadinstitut
     -V xbl.intervals.vcf.filtered.vcf \
     -V xbm.intervals.vcf.filtered.vcf \
     -V xbn.intervals.vcf.filtered.vcf \
+    -V xbo.intervals.vcf.filtered.vcf \
     -out GATK.vcf \
     -assumeSorted
