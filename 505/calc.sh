@@ -20,10 +20,10 @@ vcftools --gzvcf $file_in \
          --site-depth
 echo "done site depth"
 
-# vcftools --gzvcf $file_in \
-#         --out $prefix \
-#         --site-mean-depth
-# echo "done site mean depth"
+vcftools --gzvcf $file_in \
+        --out $prefix \
+        --site-mean-depth
+echo "done site mean depth"
 
 vcftools --gzvcf $file_in \
          --out $prefix \
