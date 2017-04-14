@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cd /Network/Servers/avalanche.plb.ucdavis.edu/Volumes/Mammoth/Users/ruijuanli/505/data/late_silique
+
+sample=`ls -al | grep "Mar" | grep "Sample" | awk '{print $8}' | tr "\/" " "`
+echo $sample
+
+for i in $sample
+	do
+	echo ${i}
+	scp ruijuanli@cabernet.genomecenter.ucdavis.edu:/share/malooflab/Ruijuan/505/late_silique/raw_data/bioftp.org/TBD170136_20170317/bioftp.org/TBD170136_20170317/${i}/Aligned.sortedByCoord.out.bam ${i}
+
+done
