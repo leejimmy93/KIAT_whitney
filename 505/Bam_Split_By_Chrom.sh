@@ -1,6 +1,10 @@
 #!/bin/bash 
 
-dir=/Network/Servers/avalanche.plb.ucdavis.edu/Volumes/Mammoth/Users/ruijuanli/2017_winter/505/data/bioftp.org/TBD170026_20170202
+# dir=/Network/Servers/avalanche.plb.ucdavis.edu/Volumes/Mammoth/Users/ruijuanli/2017_winter/505/data/bioftp.org/TBD170026_20170202
+
+dir=/Network/Servers/avalanche.plb.ucdavis.edu/Volumes/Mammoth/Users/ruijuanli/505/data/late_silique
+
+cd $dir
 
 sample=`ls | grep "Sample" | sed 's/\///g' | sed 's/Sample_//g'`
 echo $sample
@@ -12,7 +16,7 @@ for i in $sample
         echo $i
 
 # cd to directory
-cd $dir/Sample_${i}/
+cd Sample_${i}/
 
 # echo "index"
 samtools index final.bam
